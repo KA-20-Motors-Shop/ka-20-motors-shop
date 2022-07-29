@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-import { InputOne } from './styles/inputs';
+import { InputOne, TextField } from './styles/inputs';
+import { GlobalStyle, Reset } from './styles/global';
 
 function App() {
   return (
     <div className="App">
-          <InputOne placeholder='uiui'/>
+          <InputOne placeholder='Text'/>
+          <TextField placeholder='Text' />
+      <GlobalStyle/>
+      <Reset/>
     </div>
   );
 }

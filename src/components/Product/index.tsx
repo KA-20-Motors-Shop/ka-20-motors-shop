@@ -5,7 +5,7 @@ interface ICardProduct {
     product: object;
   }
   
-  const Product = ({ product }: ICardProduct) => {
+const Product = ({ product }: ICardProduct) => {
     return (
       <ProductCard>
         <div className="imgBox">

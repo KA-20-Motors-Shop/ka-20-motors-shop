@@ -1,11 +1,12 @@
 import Button from "../button";
 import { StyledHeader, StyledMenuButton } from "./styles";
 import { FaBars } from "react-icons/fa";
+import logo from "./../../images/logo.jpg";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <img src="./src/images/logo.jpg" alt="Logo" />
+      <img src={logo} alt="Logo" />
 
       <StyledMenuButton>
         <FaBars />

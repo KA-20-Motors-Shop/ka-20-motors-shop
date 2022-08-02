@@ -1,5 +1,4 @@
 import "./App.css";
-
 import { GlobalStyle, Reset } from "./styles/global";
 import Header from "./components/header";
 

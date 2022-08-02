@@ -75,7 +75,6 @@ export const ProductCard = styled.section`
   .smallImgBox {
     background: #e9ecef;
     border-radius: 4px;
-
     padding: 36px 44px;
   }
 

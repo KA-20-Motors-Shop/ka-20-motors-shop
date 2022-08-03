@@ -5,39 +5,49 @@ interface ICardProduct {
   product: object;
 }
 
-const Product = ({ product }: ICardProduct) => {
+const Product = () => {
+  const images = [
+    "https://static.wixstatic.com/media/532c77_0f9316e263b441a0969b69921d881785~mv2.png/v1/fill/w_460,h_236,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/carro.png",
+    "https://static.wixstatic.com/media/532c77_0f9316e263b441a0969b69921d881785~mv2.png/v1/fill/w_460,h_236,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/carro.png",
+  ];
+
   return (
     <ProductCard>
       <div className="imgBox">
-        <img alt={product.title} src={product.image} />
+        <img src="https://static.wixstatic.com/media/532c77_0f9316e263b441a0969b69921d881785~mv2.png/v1/fill/w_460,h_236,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/carro.png" />
       </div>
       <div className="detailBox">
-        <h1>{product.title}</h1>
+        <h1>Carro top o mais foda vc tem que comprar esse carrao 3000</h1>
         <div className="priceYearKmBox">
           <div className="yearKmBox">
-            <div className="yearKm">
-              <h3>{product.year}</h3>
+            <div className="year">
+              <span>2011</span>
             </div>
-            <div className="yearKm">
-              <h3>{product.km}</h3>
+            <div className="km">
+              <span>30000km</span>
             </div>
           </div>
-          <h3 className="price">{product.price}</h3>
+          <h3 className="price">R$ 100000.00</h3>
         </div>
         <Button>Comprar</Button>
       </div>
 
       <div className="descriptionBox">
         <h1>Descrição</h1>
-        <p className="description">{product.description}</p>
+        <p className="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, magnam
+          exercitationem repudiandae quam maxime minima fuga. Quibusdam, optio,
+          magnam nihil quisquam distinctio nemo harum autem iste animi ea
+          corrupti voluptate.
+        </p>
       </div>
 
       <div className="photosBox">
         <h1>Fotos</h1>
-        {product.images.map((element) => {
+        {images.map((element) => {
           return (
             <div className="smallImgBox">
-              <img src={element.url} alt={product.title} />;
+              <img src={element} />
             </div>
           );
         })}
@@ -45,10 +55,15 @@ const Product = ({ product }: ICardProduct) => {
 
       <div className="sellerDescriptionBox">
         <div className="profilePicture">
-          <img src={product.seller.image} alt={product.seller.name} />
+          <img src="https://static.wixstatic.com/media/532c77_0f9316e263b441a0969b69921d881785~mv2.png/v1/fill/w_460,h_236,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/carro.png" />
         </div>
-        <h1>{product.seller.name}</h1>
-        <p className="description">{product.seller.description}</p>
+        <h1>Agnes Eu</h1>
+        <p className="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam a eos
+          numquam quibusdam nesciunt architecto eum obcaecati odio molestiae
+          molestias excepturi autem, explicabo nobis ducimus temporibus eius
+          labore facilis ea?
+        </p>
         <Button>Ver todos anúncios</Button>
       </div>
     </ProductCard>

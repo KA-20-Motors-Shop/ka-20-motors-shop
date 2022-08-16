@@ -1,0 +1,82 @@
+import Button from "../button";
+import Input from "../Input";
+import TextArea from "../TextArea";
+import AdRegisterForm from "./style";
+
+const AdRegister = () => {
+  return (
+    <AdRegisterForm>
+      <h3>Criar Anúncio</h3>
+      <form>
+        <span>Tipo de anúncio</span>
+        <div className="choiceButtons">
+          <Button children="Venda" />
+          <Button children="Leilão" />
+        </div>
+
+        <span>Informações do veículo</span>
+        <Input
+          type="text"
+          label="Título"
+          name="title"
+          placeholder="Digitar título"
+        />
+        <div className="anoKmPreco">
+          <Input
+            type="number"
+            label="Ano"
+            name="year"
+            placeholder="Digitar ano"
+          />
+          <Input
+            type="number"
+            label="Quilometragem"
+            name="kilometers"
+            placeholder="Digitar ano"
+          />
+          <Input
+            type="number"
+            label="Preço"
+            name="price"
+            placeholder="Digitar preço"
+          />
+        </div>
+
+        <TextArea
+          label="Descrição"
+          name="description"
+          placeholder="Digitar descrição"
+        />
+        <span>Tipo de veículo</span>
+        <div className="choiceButtons">
+          <Button children="Carro" />
+          <Button children="Moto" />
+        </div>
+        <Input
+          label="Imagem de capa"
+          type="text"
+          placeholder="Inserir URL da imagem"
+          name="bannerImage"
+        />
+        <Input
+          label="1º imagem da galeria"
+          type="text"
+          placeholder="Inserir URL da imagem"
+          name="image"
+        />
+        <div className="addFieldButton">
+          <Button children="Adicionar campo para imagem da galeria" />
+        </div>
+      </form>
+      <div className="cancelCreateButtons">
+        <div className="cancel">
+          <Button className="cancel" children="Cancelar" />
+        </div>
+        <div className="create">
+          <Button className="create" children="Criar Anúncio" />
+        </div>
+      </div>
+    </AdRegisterForm>
+  );
+};
+export default AdRegister;

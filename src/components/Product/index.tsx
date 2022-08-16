@@ -44,9 +44,9 @@ const Product = () => {
 
       <div className="photosBox">
         <h1>Fotos</h1>
-        {images.map((element) => {
+        {images.map((element, index) => {
           return (
-            <div className="smallImgBox">
+            <div key={index} className="smallImgBox">
               <img src={element} />
             </div>
           );

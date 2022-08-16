@@ -9,7 +9,7 @@ const Comments = ({ product }: ICardComments) => {
   return (
     <CommentsCard>
       <h1>Comentários</h1>
-      <div>
+      {/* <div>
         {product.comments.map((comment) => {
           return (
             <div className="commentBox">
@@ -27,7 +27,7 @@ const Comments = ({ product }: ICardComments) => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </CommentsCard>
   );
 };

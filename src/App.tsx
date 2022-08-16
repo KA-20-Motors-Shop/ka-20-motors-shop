@@ -1,6 +1,7 @@
 import "./App.css";
 import { GlobalStyle, Reset } from "./styles/global";
 import Header from "./components/header";
+import AdRegister from "./components/adRegister";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Reset />
       <Header />
+      <AdRegister />
     </div>
   );
 }

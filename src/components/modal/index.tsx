@@ -1,3 +1,4 @@
+import AdRegister from "../adRegister";
 import Button from "../button";
 import Input from "../Input";
 import TextArea from "../TextArea";
@@ -30,66 +31,14 @@ const Modal = ({ type }: IModal) => {
         </div>
       ) : type === "createPost" ? (
         <div>
-          <form action="">
-            <span>Tipo de anúncio</span>
-            <Button children="Venda" />
-            <Button children="Leilão" />
-            <span>Informações do veículo</span>
-            <Input
-              type="text"
-              label="Título"
-              name="title"
-              placeholder="Digitar título"
-            />
-            <Input
-              type="number"
-              label="Ano"
-              name="year"
-              placeholder="Digitar ano"
-            />
-            <Input
-              type="number"
-              label="Quilometragem"
-              name="kilometers"
-              placeholder="Digitar ano"
-            />
-            <Input
-              type="number"
-              label="Preço"
-              name="price"
-              placeholder="Digitar preço"
-            />
-            <TextArea
-              label="Descrição"
-              name="description"
-              placeholder="Digitar descrição"
-            />
-            <span>Tipo de veículo</span>
-            <Button children="Carro" />
-            <Button children="Moto" />
-            <Input
-              label="Imagem de capa"
-              type="image"
-              placeholder="Inserir URL da imagem"
-              name="bannerImage"
-            />
-            <Input
-              label="1º imagem da galeria"
-              type="image"
-              placeholder="Inserir URL da imagem"
-              name="image"
-            />
-            <Button children="Adicionar campo para imagem da galeria" />
-            <Button children="Cancelar" />
-            <Button children="Criar Anúncio" />
-          </form>
+          <AdRegister />
         </div>
       ) : type === "updateAddress" ? (
         <div>
           {/* <div> */}
-            {/* <h3>Editar endereço</h3> */}
-            {/* adicionar icon */}
-            {/* <button>x</button> */}
+          {/* <h3>Editar endereço</h3> */}
+          {/* adicionar icon */}
+          {/* <button>x</button> */}
           {/* </div> */}
           <form action="">
             <span>Informações de endereço</span>
@@ -136,11 +85,11 @@ const Modal = ({ type }: IModal) => {
       ) : type === "updateProfile" ? (
         <div>
           {/* <div> */}
-              {/* <h3>Editar perfil</h3> */}
-              {/* adicionar icon */}
-              {/* <button>x</button> */}
-            {/* </div> */}
-            <form action="">
+          {/* <h3>Editar perfil</h3> */}
+          {/* adicionar icon */}
+          {/* <button>x</button> */}
+          {/* </div> */}
+          <form action="">
             <span>Informações pessoais</span>
             <Input
               type="text"
@@ -177,12 +126,12 @@ const Modal = ({ type }: IModal) => {
         </div>
       ) : type === "updatePost" ? (
         <div>
-            {/* <div> */}
-              {/* <h3>Editar anúncio</h3> */}
-              {/* adicionar icon */}
-              {/* <button>x</button> */}
-            {/* </div> */}
-            <form action="">
+          {/* <div> */}
+          {/* <h3>Editar anúncio</h3> */}
+          {/* adicionar icon */}
+          {/* <button>x</button> */}
+          {/* </div> */}
+          <form action="">
             <span>Tipo de anúncio</span>
             <Button children="Venda" />
             <Button children="Leilão" />
@@ -246,18 +195,24 @@ const Modal = ({ type }: IModal) => {
           </form>
         </div>
       ) : (
-        type === "deletePost" && 
-        <div>
-          {/* <div> */}
+        type === "deletePost" && (
+          <div>
+            {/* <div> */}
             {/* <h3>Excluir anúncio</h3> */}
             {/* adicionar icone no botao */}
             {/* <button>x</button>  */}
-          {/* </div> */}
-          <span ><strong>Tem certeza que deseja remover este anúncio?</strong></span>
-          <p>Essa ação não pode ser desfeita. Isso excluirá permanentemente sua conta e removerá seus dados de nossos servidores.</p>
-          <Button children="Cancelar"/>
-          <Button children="Sim, excluir anúncio"/>
-        </div>
+            {/* </div> */}
+            <span>
+              <strong>Tem certeza que deseja remover este anúncio?</strong>
+            </span>
+            <p>
+              Essa ação não pode ser desfeita. Isso excluirá permanentemente sua
+              conta e removerá seus dados de nossos servidores.
+            </p>
+            <Button children="Cancelar" />
+            <Button children="Sim, excluir anúncio" />
+          </div>
+        )
       )}
     </>
   );

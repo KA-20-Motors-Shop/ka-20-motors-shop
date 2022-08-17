@@ -8,12 +8,12 @@ export const StyledHeader = styled.header`
   height: 70px;
   border-bottom: 2px solid lightgray;
 
-  nav {
+  .desktopNav {
     display: none;
   }
 
   @media screen and (min-width: 1024px) {
-    nav {
+    .desktopNav {
       width: 50%;
       display: flex;
       justify-content: space-evenly;

@@ -2,10 +2,10 @@ interface IButtonProps {
   children: string;
 }
 
-const Button = ({ children }: IButtonProps) => {
+const Button = ({ children, ...rest }: IButtonProps) => {
   return (
     <>
-      <button>{children}</button>
+      <button {...rest}>{children}</button>
     </>
   );
 };

@@ -3,7 +3,11 @@ import Input from "../Input";
 import TextArea from "../TextArea";
 import AdRegisterForm from "./style";
 
-const AdRegister = () => {
+interface IAdRegister {
+  type: string;
+}
+
+const AdRegister = ({ type }: IAdRegister) => {
   return (
     <AdRegisterForm>
       <h3>Criar Anúncio</h3>
@@ -41,7 +45,6 @@ const AdRegister = () => {
             placeholder="Digitar preço"
           />
         </div>
-
         <TextArea
           label="Descrição"
           name="description"
@@ -52,6 +55,19 @@ const AdRegister = () => {
           <Button children="Carro" />
           <Button children="Moto" />
         </div>
+
+        {type === "update" ? (
+          <>
+            <span>Publicado</span>
+            <div className="choiceButtons">
+              <Button children="Sim" />
+              <Button children="Não" />
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+
         <Input
           label="Imagem de capa"
           type="text"
@@ -68,14 +84,23 @@ const AdRegister = () => {
           <Button children="Adicionar campo para imagem da galeria" />
         </div>
       </form>
-      <div className="cancelCreateButtons">
-        <div className="cancel">
-          <Button className="cancel" children="Cancelar" />
+      {type === "update" ? (
+        <div className="cancelCreateButtons">
+          <div className="choiceButtons">
+            <Button children="Excluir anúncio" />
+            <Button children="Salvar alterações" />
+          </div>
         </div>
-        <div className="create">
-          <Button className="create" children="Criar Anúncio" />
+      ) : (
+        <div className="cancelCreateButtons">
+          <div className="cancel">
+            <Button children="Cancelar" />
+          </div>
+          <div className="create">
+            <Button children="Criar Anúncio" />
+          </div>
         </div>
-      </div>
+      )}
     </AdRegisterForm>
   );
 };

@@ -87,7 +87,7 @@ const AdRegisterForm = styled.div`
     }
 
     @media (min-width: 768px) {
-      width: 129px;
+      width: 315px;
     }
   }
   @media (min-width: 768px) {

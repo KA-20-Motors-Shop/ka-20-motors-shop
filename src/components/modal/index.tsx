@@ -31,7 +31,7 @@ const Modal = ({ type }: IModal) => {
         </div>
       ) : type === "createPost" ? (
         <div>
-          <AdRegister />
+          <AdRegister type="update" />
         </div>
       ) : type === "updateAddress" ? (
         <div>

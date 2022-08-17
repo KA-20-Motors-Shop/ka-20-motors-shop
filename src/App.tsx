@@ -1,14 +1,16 @@
 import "./App.css";
 import { GlobalStyle, Reset } from "./styles/global";
-import Header from "./components/header";
+import Routes from "./routes";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyle />
       <Reset />
-      <Header />
-    </div>
+      <div className="App">
+        <Routes />
+      </div>
+    </>
   );
 }
 

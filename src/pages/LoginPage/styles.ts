@@ -14,9 +14,11 @@ export const StyledPage = styled.div`
 export const FormContainer = styled.div`
     width: 90%;
     background-color: var(--color-grey10);
-    height: 55%;
     border-radius: 4px;
-    padding: 15% 8%;
+    padding: 3em 1em;
+    min-width: 288px;
+    max-width: 384px;
+    
     h3 {
         padding: none;
         margin-top: 0px;
@@ -33,7 +35,8 @@ export const FormContainer = styled.div`
         }
         button{
             width: 100%;
-            height: 28px;
+            min-height: 28px;
+            max-height: 48px;
         }
         input{
             width: 100%;
@@ -55,15 +58,12 @@ export const FormContainer = styled.div`
         font-size: 14px;
         color: var(--color-grey2)
     }
-    @media screen and (min-width: 1024px) {
-        width: 20%;
-        padding: 2%;
-        height: 50%;
+    @media screen and (min-width: 428px) {
         form{
-            button {
+            button{
                 height: 48px;
-
             }
         }
+        
     }
 `

@@ -2,6 +2,7 @@ import AdRegister from "../adRegister";
 import Button from "../button";
 import Input from "../Input";
 import TextArea from "../TextArea";
+import { StyledNavModal } from "./styles";
 
 interface IModal {
   type: string;
@@ -11,19 +12,19 @@ const Modal = ({ type }: IModal) => {
   return (
     <>
       {type === "navModal" ? (
-        <div>
+        <StyledNavModal>
           <nav>
-            <div className="leftDivNav">
+            <div>
               <Button children="Carros" />
               <Button children="Motos" />
               <Button children="Leilão" />
             </div>
-            <div>
+            <div className="divisionNavModal">
               <Button children="Fazer Login" />
               <Button children="Cadastrar" />
             </div>
           </nav>
-        </div>
+        </StyledNavModal>
       ) : type === "productImg" ? (
         <div>
           <h3>Imagem de Veículo</h3>

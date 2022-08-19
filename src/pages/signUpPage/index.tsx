@@ -94,7 +94,7 @@ const SignUpPage = () => {
             />
             <Input
               type="password"
-              label="Senha"
+              label="Confirme sua Senha"
               name="password"
               placeholder="Repita a senha inserida acima"
             />

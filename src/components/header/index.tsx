@@ -14,9 +14,9 @@ const Header = () => {
       <img src={logo} alt="Logo" />
 
       <StyledMenuButton onClick={() => setNavModal(!navModal)}>
-        {navModal === true ? <FaBars /> : <GrClose />}
+        {navModal === false ? <FaBars /> : <GrClose />}
       </StyledMenuButton>
-      {navModal === false ? <Modal type="navModal" /> : <></>}
+      {navModal === false ? <></> : <Modal type="navModal" />}
       <nav className="desktopNav">
         <div className="leftDivNav">
           <Button children="Carros" />

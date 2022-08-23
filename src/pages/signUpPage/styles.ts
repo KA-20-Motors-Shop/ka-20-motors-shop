@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledFormSection = styled.section`
   background-color: #f1f3f5;
-  padding: 50px;
+  padding: 50px 0px;
 `;
 
 export const StyledFormDiv = styled.div`

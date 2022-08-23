@@ -9,12 +9,15 @@ const TextField = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
 
+  height: 128px;
+
   label {
     font-size: 14px;
     color: #212529;
     font-family: "Inter";
     font-weight: 500;
   }
+
   input {
     height: 70px;
     border: 1.5px solid #f1f3f5;

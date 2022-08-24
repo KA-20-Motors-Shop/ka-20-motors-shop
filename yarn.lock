@@ -8062,6 +8062,11 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
+react-regex@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-regex/-/react-regex-1.0.0.tgz#b6c31371b0683103999a8a888dac51a0e8d95493"
+  integrity sha512-H4LdSTa1xHZzJGUr9i3aevkluu/TkWqHgofTv3TDLSTyphjVNWXQvCsRgi1Qsr9fbjzIXsiqdfR28gRhCc9lOw==
+
 react-router-dom@5:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.3.3.tgz#8779fc28e6691d07afcaf98406d3812fe6f11199"

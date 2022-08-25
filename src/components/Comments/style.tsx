@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { getRandomColor } from "../../utils";
 
 const CommentsCard = styled.section`
   display: flex;
@@ -44,6 +45,7 @@ const CommentsCard = styled.section`
   }
 
   .photo {
+    background-color: ${getRandomColor};
     border-radius: 50%;
     margin-left: 4px;
   }

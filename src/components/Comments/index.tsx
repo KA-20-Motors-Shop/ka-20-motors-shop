@@ -11,12 +11,12 @@ const Comments = (ad: IAd) => {
           return (
             <div className="commentBox">
               <div className="photoNameDateBox">
-                <div className="photo">{getInitials(user.name)}</div>
+                <div className="photo">{getInitials(comment.user.name)}</div>
                 <h2 className="name">{comment.user.name}</h2>
                 <div className="dot"></div>
-                <span className="date">{comment.date}</span>
+                <span className="date">{comment.createdOn}</span>
               </div>
-              <p className="description">{comment.content}</p>
+              <p className="description">{comment.description}</p>
             </div>
           );
         })}

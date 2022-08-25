@@ -30,4 +30,13 @@ export interface IAd {
   createdOn: string;
   isActive: boolean;
   user: IUser;
+  comments: IComment[];
+}
+
+export interface IComment {
+  id: string;
+  description: string;
+  createdOn: string;
+  user: IUser;
+  ad: IAd;
 }
